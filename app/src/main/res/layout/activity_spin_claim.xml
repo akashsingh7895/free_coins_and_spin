@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpinActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@drawable/background">
+
+
+
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:background="@drawable/toolbar_conners">
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:elevation="2dp"
+                    app:tint="@color/white"
+                    app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tvHeader"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Coin Store"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/primary"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/spin_png"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="30dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="15dp">
+
+                    <TextView
+                        android:id="@+id/coins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="22dp"
+                        android:text="20000"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/claim_button"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="30dp"
+                    app:cardElevation="10dp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="22dp"
+                        android:text="Claim"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:id="@+id/share_button"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        app:tint="@color/white"
+                        android:src="@drawable/ic_baseline_share_24"
+                        android:background="@drawable/left_conners"/>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:background="@drawable/rigt_conners">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Share"
+                            android:textSize="22dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
